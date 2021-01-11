@@ -1,0 +1,137 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss homepage.
+// -----------------------------------------------------------------------------
+
+
+// sections
+
+#hero{
+	.hero--body{
+		@media (max-width: $break-md) {
+			margin-top:1rem;
+		}
+	}
+}
+
+#dominios{
+	position: relative;
+	@media (max-width: $break-xl) {
+		margin-top:2rem;
+	}
+	.grid{
+		@media (max-width: $break-lg) {
+			margin-top:2rem;
+		}
+	}
+    &::before{
+        content: "";
+        background: $brand-color;
+        display: block;
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: -1rem;
+        left: 0;
+        z-index: -5;
+        border-bottom-right-radius: 40px;
+        @media (max-width: $break-xl) {
+			top:0rem;
+		}
+		@media (min-width: $break-xxl) {
+			top:-3rem;
+		}
+    }
+
+    h2,
+    .lead,
+    .titlepre{
+    	color:var(--bs-white);
+    }
+    .card{
+    	border-radius:20px;
+    	h3{
+    		padding-top: 1.3rem;
+    	}
+    	&--icon{
+    		padding: 1rem;
+    	}
+    	&--body{
+    		padding: 1rem;
+    	}
+    }
+    .titlepre{
+    	&::before{
+    		background:var(--bs-white);
+    	}
+    }
+
+
+}
+#componentes{
+	position: relative;
+	background: $brand-color-light;
+	border-bottom-left-radius: 40px;
+	&::before{
+        content: "";
+        background: $brand-color-light;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -10rem;
+        left: 0;
+        z-index: -5;
+        
+    }
+    .card{
+    	background:none;
+    }
+}
+#cifras{
+	position: relative;
+	background: $brand-color-dark;
+	border-bottom-right-radius: 40px;
+	padding-bottom:6rem;
+	&::before{
+        content: "";
+        background: $brand-color-dark;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -10rem;
+        left: 0;
+        z-index: -5;
+        
+    }
+    .container{
+    	&::before{
+    		content: url('/assets/images/bg-cifras.png');
+    		position:absolute;
+    		opacity: 0.2;
+    		top:-2rem;
+    	}
+    }
+    h2,
+    .lead,
+    .titlepre{
+    	color:var(--bs-white);
+    }
+    .card{
+    	background:none;
+    	color:var(--bs-white);
+    	h3{
+    		color:var(--bs-white);
+    	}
+    	h4{
+    		font-weight: 300;
+    		padding: 0  2rem; 
+    	}
+    }
+    .btn{
+    	background: none;
+    	color:var(--bs-white);
+    }
+}
+

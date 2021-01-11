@@ -1,0 +1,45 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss bootstrap.
+// -----------------------------------------------------------------------------
+//
+
+//nav
+.navbar{
+	border-bottom:1px solid $color-negro-5;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+.nav-link{
+	text-transform: uppercase;
+	color:var(--bs-gray-dark) !important;
+	font-size: $size-13;
+	letter-spacing: 1px;
+}
+
+// buttons
+
+.btn-primary{
+	background-color: var(--bs-blue);
+	border-color:var(--bs-blue);
+	&:hover{
+		text-decoration: none;
+		background-color: $brand-color-s;
+		border-color:$brand-color-s;
+	}
+	&.btn-lg{
+		padding: .8125rem 1.25rem;
+		font-size: $size-16;
+		@media (max-width: $break-lg) {
+			padding: .6125rem 0.9rem;
+		}
+	}
+}
+
+//
+.lead{
+	color:var(--bs-gray-dark);
+	@media (max-width: $break-lg) {
+		font-size: $size-16;
+	}
+}

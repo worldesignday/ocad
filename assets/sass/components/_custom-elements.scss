@@ -1,0 +1,100 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss bootstrap.
+// -----------------------------------------------------------------------------
+
+// Headings
+h1{
+	@include font-set('Fira Sans', $size-50, var(--bs-dark), 0,  1.2);
+	@media (max-width: $break-lg) {
+		font-size: $size-34;
+	}
+}
+h2{
+	@include font-set('Fira Sans', $size-40, var(--bs-dark), 0,  1.2);
+	@media (max-width: $break-lg) {
+		font-size: $size-30;
+	}
+}
+h3{
+	@include font-set('Fira Sans', $size-26, var(--bs-dark), 0,  1.2);
+}
+
+// buttons
+
+.btn{
+	&-primary{
+		&-soft {
+		    background-color: $brand-color-light;
+		    color: #335eea;
+		    padding: .8125rem 1.25rem;
+		    font-size: $size-16;
+		    border:1px solid $brand-color-light;
+		    &:hover{
+				text-decoration: none;
+				background-color: $brand-color-s;
+				border-color:$brand-color-s;
+			}
+		}
+		&-line{
+			background-color: $color-negro-0;
+		    color: $brand-color;
+		    padding: .8125rem 1.25rem;
+		    font-size: $size-16;
+		    border:2px solid $brand-color;
+		    @media (max-width: $break-lg) {
+				padding: .6125rem 0.9rem;
+			}
+		    &:hover{
+				text-decoration: none;
+				background-color: $brand-color-light;
+				color: $brand-color-s;
+			}
+			&--white{
+				border:2px solid var(--bs-white);
+				color:var(--bs-white);
+				padding: .8125rem 1.25rem;
+		    	font-size: $size-16;
+		    	 &:hover{
+					text-decoration: none;
+					background-color: $brand-color-light;
+					color: $brand-color-s;
+				}
+			}
+		}
+	}
+	&--custom{
+		@include font-set('Fira Sans', $size-18, var(--bs-blue), 0,  1.2);
+	}
+
+}
+
+// custom-clases
+.titlepre{
+	text-transform:uppercase;
+	font-size: $size-13;
+	letter-spacing: 2px;
+	margin-bottom: 0.3rem;
+	position: relative;
+	padding-left: 30px;
+
+	&::before{
+		content: '';
+		width: 20px;
+		height: 1px;
+		background-color:var(--bs-dark);
+		position: absolute;
+		top:8px;
+		left: 0;
+	}
+}
+
+footer{
+	border-top:1px solid $color-negro-10;
+	padding-bottom: 6rem;
+	.feather{
+		width: 36px;
+  		height: 36px;
+  		stroke-width: 1;
+	}
+}
