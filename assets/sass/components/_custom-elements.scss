@@ -19,6 +19,9 @@ h2{
 h3{
 	@include font-set('Fira Sans', $size-26, var(--bs-dark), 0,  1.2);
 }
+h4{
+	@include font-set('Fira Sans', $size-22, var(--bs-dark), 0,  1.2);
+}
 
 // buttons
 
@@ -64,6 +67,9 @@ h3{
 		}
 	}
 	&--custom{
+		@include font-set('Fira Sans', $size-18, var(--bs-blue), 0,  1.2);
+	}
+	&--nolink{
 		@include font-set('Fira Sans', $size-18, var(--bs-blue), 0,  1.2);
 	}
 
@@ -137,6 +143,9 @@ footer{
 	}
 	&-60::before {
     	opacity: .6;
+	}
+	&-40::before {
+    	opacity: .4;
 	}
 
 }
@@ -237,4 +246,28 @@ footer{
 
 .animated.slideUp {
 	animation-name: slideUp
+}
+
+
+//Hover animations
+
+//lift
+
+.lift {
+	-webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
+	transition: box-shadow .25s ease, -webkit-transform .25s ease;
+	transition: box-shadow .25s ease, transform .25s ease;
+	transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease
+}
+
+.lift:focus,
+.lift:hover {
+	box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .1)!important;
+	transform: translate3d(0, -3px, 0)
+}
+
+.lift-lg:focus,
+.lift-lg:hover {
+	box-shadow: 0 2rem 5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .05)!important;
+	transform: translate3d(0, -7px, 0)
 }

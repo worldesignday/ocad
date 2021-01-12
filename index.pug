@@ -49,19 +49,33 @@ block contenido
             .titlepre
                 |Portal de datos
             h2.mb-5 Componentes
-            .row
-                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-duration="700")
-                    +simple-card('Consulta externa general y especializada', '#')
-                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-delay="50" data-aos-duration="700")
-                    +simple-card('Hospitalización paciente agudo', '#')
-                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-delay="100" data-aos-duration="700")
-                    +simple-card('Cuidados paliativos', '#')
-                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-delay="150" data-aos-duration="700")
-                    +simple-card('Hospitalización paciente crónico con ventilador', '#')
-                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+            .row(style="overflow:hidden;")
+                .swiper-container2
+                    .swiper-wrapper
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-duration="700")
+                                +simple-card('Consulta externa general y especializada', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-delay="50" data-aos-duration="700")
+                                +simple-card('Hospitalización paciente agudo', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-delay="100" data-aos-duration="700")
+                                +simple-card('Cuidados paliativos', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-delay="150" data-aos-duration="700")
+                                +simple-card('Hospitalización paciente crónico con ventilador', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12
+                                +simple-card('Lorem ipsum dolor sit ametr', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                    .swiper-pagination
+                    .swiper-button-prev
+                    .swiper-button-next
+
     // Seccion Cifras
     section.pt-4.pt-md-11#cifras
         .container
@@ -84,13 +98,15 @@ block contenido
     // Seccion Documentos
     section#documentos
         .container
-            .pt-md-11.overlay.overlay-black.overlay-60(data-jarallax data-speed="0.8" style="background-image: url(https://landkit.goodthemes.co/assets/img/covers/cover-6.jpg);")
+            .pt-md-11.overlay.overlay-black.overlay-40(data-jarallax data-speed="0.8" style="background-image: url(https://landkit.goodthemes.co/assets/img/covers/cover-6.jpg);")
                 .row.justify-content-center.wrap
                     .col-12.col-md-5
+                        .titlepre
+                            |Portal de datos
                         h2 Documento técnico Observatorio Colombiano de atención Domiciliaria
                         div
-                            a(href="" class="btn btn-primary shadow lift mr-1" )
-                                |Consultar
+                            a(href="" class="btn btn-primary-line--white btn-lg" ) Consultar
+                                i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
 
                     .col-12.col-md-5
                         .row.justify-content-center.pt-4

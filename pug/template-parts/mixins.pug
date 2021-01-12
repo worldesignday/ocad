@@ -1,6 +1,7 @@
 //- card dominio
 mixin dominio-card(refimg, titlecard, linkdominio)
-	.card
+	a(class="card lift lift-lg" href="#")
+		span.card--id
 		.card-body
 			.row.row-cols-2
 				.col-12.col-md-12.col-lg-4
@@ -13,7 +14,7 @@ mixin dominio-card(refimg, titlecard, linkdominio)
 					.card--body
 						block
 				.col-12
-					a(href=linkdominio class="btn btn--custom" )
+					span(class="btn--custom")
 						|ver más
 						i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
 mixin simple-card(basictitlecard,linkcomponente)
@@ -38,10 +39,11 @@ mixin simple-count(datafrom,datato, counter,titlecounter)
 
 mixin card(titlecard,linkcard)
 		.card.border-0.mb-4
-			h3
+			h4
 				= titlecard
 			p
 				block
 			div
-				a(href=linkcard class="btn btn-primary shadow lift mr-1 d-inline" )
+				a(href=linkcard class="btn btn--custom" )
 					|Ver más
+					i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
