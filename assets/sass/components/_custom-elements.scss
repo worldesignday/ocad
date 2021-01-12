@@ -89,6 +89,7 @@ h3{
 	}
 }
 
+// footer
 footer{
 	border-top:1px solid $color-negro-10;
 	padding-bottom: 6rem;
@@ -97,4 +98,143 @@ footer{
   		height: 36px;
   		stroke-width: 1;
 	}
+}
+// Parallax
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    /* support for plugin https://github.com/bfred-it/object-fit-images */
+    font-family: 'object-fit: cover;';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+//overlay
+.overlay{
+	position: relative;
+	&::before {
+	    content: "";
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    border-radius: inherit;
+	    z-index: 0;
+	}
+	&-black::before {
+    	background-color: #161c2d;
+	}
+	&-80::before {
+    	opacity: .8;
+	}
+	&-60::before {
+    	opacity: .6;
+	}
+
+}
+
+// headroom
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+ .header--fixed {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.animated {
+	animation-duration: .5s;
+	animation-fill-mode: both;
+	will-change: transform, opacity
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%)
+	}
+	100% {
+		-webkit-transform: translateY(0)
+	}
+}
+
+@-moz-keyframes slideDown {
+	0% {
+		-moz-transform: translateY(-100%)
+	}
+	100% {
+		-moz-transform: translateY(0)
+	}
+}
+
+@-o-keyframes slideDown {
+	0% {
+		-o-transform: translateY(-100%)
+	}
+	100% {
+		-o-transform: translateY(0)
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%)
+	}
+	100% {
+		transform: translateY(0)
+	}
+}
+
+.animated.slideDown {
+	animation-name: slideDown
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(0)
+	}
+	100% {
+		-webkit-transform: translateY(-100%)
+	}
+}
+
+@-moz-keyframes slideUp {
+	0% {
+		-moz-transform: translateY(0)
+	}
+	100% {
+		-moz-transform: translateY(-100%)
+	}
+}
+
+@-o-keyframes slideUp {
+	0% {
+		-o-transform: translateY(0)
+	}
+	100% {
+		-o-transform: translateY(-100%)
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(0)
+	}
+	100% {
+		transform: translateY(-100%)
+	}
+}
+
+.animated.slideUp {
+	animation-name: slideUp
 }

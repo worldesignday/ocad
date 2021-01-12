@@ -24,18 +24,24 @@ block contenido
                             i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
                 .grid.col-12.col-md-12.col-lg-8
                     .row(data-masonry='{"percentPosition": true }') 
-                        +dominio-card('/assets/images/icons/normatividad-icon.svg', 'Normatividad', '#')
-                            |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-                        +dominio-card('/assets/images/icons/contexto-icon.svg', 'Contexto sociodemográfico y epidemiológico', '#')
-                            |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-                        +dominio-card('/assets/images/icons/servicios-icon.svg', 'Servicios de atención domiciliaria', '#')
-                            |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-                        +dominio-card('/assets/images/icons/talento-icon.svg', 'Talento humano', '#')
-                            |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-                        +dominio-card('/assets/images/icons/familia-icon.svg', 'Pacientes y familias', '#')
-                            |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-                        +dominio-card('/assets/images/icons/provision-icon.svg', 'Provisión de atención', '#')
-                            |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700")
+                            +dominio-card('/assets/images/icons/normatividad-icon.svg', 'Normatividad', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700" data-aos-delay="50")
+                            +dominio-card('/assets/images/icons/contexto-icon.svg', 'Contexto sociodemográfico y epidemiológico', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/servicios-icon.svg', 'Servicios de atención domiciliaria', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/talento-icon.svg', 'Talento humano', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/familia-icon.svg', 'Pacientes y familias', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/provision-icon.svg', 'Provisión de atención', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
 
     // Seccion Componentes
     section.pt-4.pb-5#componentes
@@ -44,14 +50,18 @@ block contenido
                 |Portal de datos
             h2.mb-5 Componentes
             .row
-                +simple-card('Consulta externa general y especializada', '#')
-                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                +simple-card('Hospitalización paciente agudo', '#')
-                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                +simple-card('Cuidados paliativos', '#')
-                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                +simple-card('Hospitalización paciente crónico con ventilador', '#')
-                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-duration="700")
+                    +simple-card('Consulta externa general y especializada', '#')
+                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-delay="50" data-aos-duration="700")
+                    +simple-card('Hospitalización paciente agudo', '#')
+                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-delay="100" data-aos-duration="700")
+                    +simple-card('Cuidados paliativos', '#')
+                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                .col-sm-6.col-md-6.col-lg-3.mb-4(data-aos="fade-up" data-aos-delay="150" data-aos-duration="700")
+                    +simple-card('Hospitalización paciente crónico con ventilador', '#')
+                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
     // Seccion Cifras
     section.pt-4.pt-md-11#cifras
         .container
@@ -61,37 +71,45 @@ block contenido
             p.lead.text-center.mb-5
                 |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
             .row
-                +simple-count('1106','Servicios de atención Domiciliaria')
-                +simple-count('1432','Oferta de servicios para población pediatríca')
-                +simple-count('267','Programas de cuidado al cuidador familiar')
-                +simple-count('100','Cuidados de enfermeríaen atención domiciliaria')
+                +simple-count('1000', '1106', '','Servicios de atención Domiciliaria')
+                +simple-count('1300','1432', '','Oferta de servicios para población pediatríca')
+                +simple-count('200','267','','Programas de cuidado al cuidador familiar')
+                +simple-count('50','100', '','Cuidados de enfermeríaen atención domiciliaria')
             .row.justify-content-center
                 div.w-auto.mt-4
                     a(href="" class="btn btn-primary-line btn-lg lift ms-2 mt-md-3 mt-lg-0" )
                         |Diligenciar Encuesta
                         i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
 
-    // Seccion Cifras
-    section.pt-4.pt-md-11
+    // Seccion Documentos
+    section#documentos
         .container
-            .row
-                .col-12.col-md-6
-                    h2 Documento técnico Observatorio Colombiano de atención Domiciliaria
-                    div
-                        a(href="" class="btn btn-primary shadow lift mr-1" )
-                            |Consultar
+            .pt-md-11.overlay.overlay-black.overlay-60(data-jarallax data-speed="0.8" style="background-image: url(https://landkit.goodthemes.co/assets/img/covers/cover-6.jpg);")
+                .row.justify-content-center.wrap
+                    .col-12.col-md-5
+                        h2 Documento técnico Observatorio Colombiano de atención Domiciliaria
+                        div
+                            a(href="" class="btn btn-primary shadow lift mr-1" )
+                                |Consultar
 
-                .col-12.col-md-6
-                    .row.justify-content-center.pt-4
-                        .col-8
-                            +card('Documento técnico 1', '#')
-                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                            +card('Documento técnico 2', '#')
-                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-
-
-
-
+                    .col-12.col-md-5
+                        .row.justify-content-center.pt-4
+                            .col-8(style="overflow:hidden; height:400px;")
+                                .swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            +card('Documento técnico 1', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                        .swiper-slide
+                                            +card('Documento técnico 2', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                        .swiper-slide
+                                            +card('Documento técnico 3', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                        .swiper-slide
+                                            +card('Documento técnico 4', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                    .swiper-pagination
 
                         
 

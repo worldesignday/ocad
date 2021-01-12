@@ -14,10 +14,11 @@
     <title>OCAD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="/assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"><!--[if IE]>
+    <link rel="stylesheet" href="https://landkit.goodthemes.co/assets/libs/aos/dist/aos.css">
+    <link rel="stylesheet" src="https://swiperjs.com/package/swiper-bundle.min.css"><!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-    <script src="https://unpkg.com/feather-icons"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119895653-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -29,26 +30,28 @@
       
     </script>
     <body>
-      <div class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container"><a class="navbar-brand" href="#"> <img src="/assets/images/logo-ocad.png"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav item"> <a class="nav-link">Inicio</a></li>
-              <li class="nav item"> <a class="nav-link">Acerca del Ocad</a></li>
-              <li class="nav item"> <a class="nav-link">Portal de Datos</a></li>
-              <li class="nav item"> <a class="nav-link">Publicaciones</a></li>
-            </ul><a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">Contáctenos</a>
+      <header class="header header--fixed hide-from-print" id="header">
+        <div class="navbar navbar-expand-lg navbar-light bg-white">
+          <div class="container"><a class="navbar-brand" href="#"> <img src="/assets/images/logo-ocad.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav item"> <a class="nav-link">Inicio</a></li>
+                <li class="nav item"> <a class="nav-link">Acerca del Ocad</a></li>
+                <li class="nav item"> <a class="nav-link">Portal de Datos</a></li>
+                <li class="nav item"> <a class="nav-link">Publicaciones</a></li>
+              </ul><a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">Contáctenos</a>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
       <!-- /.nav-->
       <!-- Seccion Hero-->
       <section id="hero">
         <div class="container">
           <div class="row align-items-center justify-content-between">
-            <div class="col-12 col-md-7 col-lg-6 order-md-2"><img class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 border-40-bl" src="/assets/images/hero-ocad.jpg"></div>
-            <div class="hero--body col-12 col-md-5 col-lg-5 order-md-1 aos-init aos-animate" data-aos="fade-up">
+            <div class="col-12 col-md-7 col-lg-6 order-md-2" data-aos="fade-up" data-aos-offset="0" data-aos-duration="600" data-aos-delay="50"><img class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 border-40-bl" src="/assets/images/hero-ocad.jpg"></div>
+            <div class="hero--body col-12 col-md-5 col-lg-5 order-md-1" data-aos="fade-up" data-aos-duration="600">
               <div class="titlepre">Lanzamiento</div>
               <h1>Observatorio Colombiano de Atención Domiciliaria</h1>
               <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
@@ -71,7 +74,7 @@
             </div>
             <div class="grid col-12 col-md-12 col-lg-8">
               <div class="row" data-masonry="{&quot;percentPosition&quot;: true }"> 
-                      <div class="col-sm-6 mb-4">
+                <div class="col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="700">
                         <div class="card">
                           <div class="card-body">
                             <div class="row row-cols-2">
@@ -90,8 +93,8 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-sm-6 mb-4">
+                </div>
+                <div class="col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
                         <div class="card">
                           <div class="card-body">
                             <div class="row row-cols-2">
@@ -110,8 +113,8 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-sm-6 mb-4">
+                </div>
+                <div class="col-sm-6 mb-4">
                         <div class="card">
                           <div class="card-body">
                             <div class="row row-cols-2">
@@ -130,8 +133,8 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-sm-6 mb-4">
+                </div>
+                <div class="col-sm-6 mb-4">
                         <div class="card">
                           <div class="card-body">
                             <div class="row row-cols-2">
@@ -150,8 +153,8 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-sm-6 mb-4">
+                </div>
+                <div class="col-sm-6 mb-4">
                         <div class="card">
                           <div class="card-body">
                             <div class="row row-cols-2">
@@ -170,8 +173,8 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-sm-6 mb-4">
+                </div>
+                <div class="col-sm-6 mb-4">
                         <div class="card">
                           <div class="card-body">
                             <div class="row row-cols-2">
@@ -190,7 +193,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
+                </div>
               </div>
             </div>
           </div>
@@ -202,7 +205,7 @@
           <div class="titlepre">Portal de datos</div>
           <h2 class="mb-5">Componentes</h2>
           <div class="row">
-                  <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="700">
                     <div class="card border-0">
                       <h3>Consulta externa general y especializada
                       </h3>
@@ -210,8 +213,8 @@
                       </p>
                       <div><a class="btn btn--custom xl-0" href="#">ver más<i class=" d-none d-md-inline ms-1" data-feather="arrow-right"></i></a></div>
                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="50" data-aos-duration="700">
                     <div class="card border-0">
                       <h3>Hospitalización paciente agudo
                       </h3>
@@ -219,8 +222,8 @@
                       </p>
                       <div><a class="btn btn--custom xl-0" href="#">ver más<i class=" d-none d-md-inline ms-1" data-feather="arrow-right"></i></a></div>
                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                     <div class="card border-0">
                       <h3>Cuidados paliativos
                       </h3>
@@ -228,8 +231,8 @@
                       </p>
                       <div><a class="btn btn--custom xl-0" href="#">ver más<i class=" d-none d-md-inline ms-1" data-feather="arrow-right"></i></a></div>
                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
                     <div class="card border-0">
                       <h3>Hospitalización paciente crónico con ventilador
                       </h3>
@@ -237,7 +240,7 @@
                       </p>
                       <div><a class="btn btn--custom xl-0" href="#">ver más<i class=" d-none d-md-inline ms-1" data-feather="arrow-right"></i></a></div>
                     </div>
-                  </div>
+            </div>
           </div>
         </div>
       </section>
@@ -250,32 +253,28 @@
           <div class="row">
                   <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                     <div class="card border-0 text-center">
-                      <h3 class="display-4">1106
-                      </h3>
+                      <h3 class="display-4"><span data-toggle="countup" data-from="1000" data-to="1106" data-aos="" data-aos-id="countup:in"></span></h3>
                       <h4 class="fs-5">Servicios de atención Domiciliaria
                       </h4>
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                     <div class="card border-0 text-center">
-                      <h3 class="display-4">1432
-                      </h3>
+                      <h3 class="display-4"><span data-toggle="countup" data-from="1300" data-to="1432" data-aos="" data-aos-id="countup:in"></span></h3>
                       <h4 class="fs-5">Oferta de servicios para población pediatríca
                       </h4>
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                     <div class="card border-0 text-center">
-                      <h3 class="display-4">267
-                      </h3>
+                      <h3 class="display-4"><span data-toggle="countup" data-from="200" data-to="267" data-aos="" data-aos-id="countup:in"></span></h3>
                       <h4 class="fs-5">Programas de cuidado al cuidador familiar
                       </h4>
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                     <div class="card border-0 text-center">
-                      <h3 class="display-4">100
-                      </h3>
+                      <h3 class="display-4"><span data-toggle="countup" data-from="50" data-to="100" data-aos="" data-aos-id="countup:in"></span></h3>
                       <h4 class="fs-5">Cuidados de enfermeríaen atención domiciliaria
                       </h4>
                     </div>
@@ -286,31 +285,60 @@
           </div>
         </div>
       </section>
-      <!-- Seccion Cifras-->
-      <section class="pt-4 pt-md-11">
+      <!-- Seccion Documentos-->
+      <section id="documentos">
         <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <h2>Documento técnico Observatorio Colombiano de atención Domiciliaria</h2>
-              <div><a class="btn btn-primary shadow lift mr-1" href="">Consultar</a></div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="row justify-content-center pt-4">
-                <div class="col-8">
-                        <div class="card border-0 mb-4">
-                          <h3>Documento técnico 1
-                          </h3>
-                          <p>Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                          </p>
-                          <div><a class="btn btn-primary shadow lift mr-1 d-inline" href="#">Ver más</a></div>
+          <div class="pt-md-11 overlay overlay-black overlay-60" data-jarallax data-speed="0.8" style="background-image: url(https://landkit.goodthemes.co/assets/img/covers/cover-6.jpg);">
+            <div class="row justify-content-center wrap">
+              <div class="col-12 col-md-5">
+                <h2>Documento técnico Observatorio Colombiano de atención Domiciliaria</h2>
+                <div><a class="btn btn-primary shadow lift mr-1" href="">Consultar</a></div>
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="row justify-content-center pt-4">
+                  <div class="col-8" style="overflow:hidden; height:400px;">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="card border-0 mb-4">
+                                  <h3>Documento técnico 1
+                                  </h3>
+                                  <p>Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                  </p>
+                                  <div><a class="btn btn-primary shadow lift mr-1 d-inline" href="#">Ver más</a></div>
+                                </div>
                         </div>
-                        <div class="card border-0 mb-4">
-                          <h3>Documento técnico 2
-                          </h3>
-                          <p>Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
-                          </p>
-                          <div><a class="btn btn-primary shadow lift mr-1 d-inline" href="#">Ver más</a></div>
+                        <div class="swiper-slide">
+                                <div class="card border-0 mb-4">
+                                  <h3>Documento técnico 2
+                                  </h3>
+                                  <p>Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                  </p>
+                                  <div><a class="btn btn-primary shadow lift mr-1 d-inline" href="#">Ver más</a></div>
+                                </div>
                         </div>
+                        <div class="swiper-slide">
+                                <div class="card border-0 mb-4">
+                                  <h3>Documento técnico 3
+                                  </h3>
+                                  <p>Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                  </p>
+                                  <div><a class="btn btn-primary shadow lift mr-1 d-inline" href="#">Ver más</a></div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                                <div class="card border-0 mb-4">
+                                  <h3>Documento técnico 4
+                                  </h3>
+                                  <p>Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                  </p>
+                                  <div><a class="btn btn-primary shadow lift mr-1 d-inline" href="#">Ver más</a></div>
+                                </div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -335,12 +363,19 @@
         </div>
       </footer>
       <!-- /footer -->
-      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script>
+        feather.replace();
+        
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-      <script src="https://unpkg.com/aos@next/dist/aos.js" async></script>
-      <script>feather.replace();</script>
-      <script>AOS.init();</script>
+      <script src="https://landkit.goodthemes.co/assets/libs/countup.js/dist/countUp.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+      <script src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="/assets/js/custom.js"></script>
     </body>
   </head>
 </html>

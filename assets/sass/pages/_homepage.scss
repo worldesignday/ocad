@@ -7,6 +7,7 @@
 // sections
 
 #hero{
+    margin-top: 76px;
 	.hero--body{
 		@media (max-width: $break-md) {
 			margin-top:1rem;
@@ -50,6 +51,16 @@
     }
     .card{
     	border-radius:20px;
+        &::before{
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius:30px;
+            position:absolute;
+            right: 1rem;
+            top: 1rem;
+            background:var(--bs-indigo);
+        }
     	h3{
     		padding-top: 1.3rem;
     	}
@@ -59,13 +70,60 @@
     	&--body{
     		padding: 1rem;
     	}
+
     }
     .titlepre{
     	&::before{
     		background:var(--bs-white);
     	}
     }
-
+    .row{
+        .col-sm-6{
+            &:nth-child(1){
+                .card{
+                    &::before{
+                        background: #ADCE6F;
+                    }
+                }
+            }
+            &:nth-child(2){
+                .card{
+                    &::before{
+                        background: #A6D6CC;
+                    }
+                }
+            }
+            &:nth-child(3){
+                .card{
+                    &::before{
+                        background: #72C1A3;
+                    }
+                }
+            }
+            &:nth-child(4){
+                .card{
+                    &::before{
+                        background: #FFF7A9;
+                    }
+                }
+            }
+            &:nth-child(5){
+                .card{
+                    &::before{
+                        background: #F9BB7C;
+                    }
+                }
+            }
+            &:nth-child(6){
+                .card{
+                    &::before{
+                        background: #F7C3DC;
+                    }
+                }
+            }
+        }
+        
+    }
 
 }
 #componentes{
@@ -134,4 +192,45 @@
     	color:var(--bs-white);
     }
 }
+#documentos{
+    margin-top: -3rem;
+    .overlay{
+        //padding-bottom:6rem;
+    }
+    .wrap{
+        position:relative;
+        z-index: 2;
+    }
+    h2{
+        color:var(--bs-white);
+    }
 
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: 200px;
+
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-container-vertical>.swiper-pagination-bullets {
+    right: 10px;
+    top: 50%;
+    transform: translate3d(0px,-50%,0);
+}
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+}
