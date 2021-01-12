@@ -9,20 +9,30 @@ h1{
 	@media (max-width: $break-lg) {
 		font-size: $size-34;
 	}
+	font-weight: 600;
 }
 h2{
 	@include font-set('Fira Sans', $size-40, var(--bs-dark), 0,  1.2);
+	font-weight: 600;
 	@media (max-width: $break-lg) {
 		font-size: $size-30;
 	}
 }
 h3{
 	@include font-set('Fira Sans', $size-26, var(--bs-dark), 0,  1.2);
+	font-weight: 600;
 }
 h4{
 	@include font-set('Fira Sans', $size-22, var(--bs-dark), 0,  1.2);
+	font-weight: 600;
 }
 
+h5{
+	font-size: $size-14 !important;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px !important	;
+}
 // buttons
 
 .btn{
@@ -68,9 +78,11 @@ h4{
 	}
 	&--custom{
 		@include font-set('Fira Sans', $size-18, var(--bs-blue), 0,  1.2);
+		font-weight: 600;
 	}
 	&--nolink{
 		@include font-set('Fira Sans', $size-18, var(--bs-blue), 0,  1.2);
+		font-weight: 600;
 	}
 
 }
@@ -97,8 +109,9 @@ h4{
 
 // footer
 footer{
-	border-top:1px solid $color-negro-10;
-	padding-bottom: 6rem;
+	background-color:$brand-color-light;
+	//border-top:1px solid $color-negro-10;
+	padding-bottom: 2rem;
 	.feather{
 		width: 36px;
   		height: 36px;
@@ -271,3 +284,4 @@ footer{
 	box-shadow: 0 2rem 5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .05)!important;
 	transform: translate3d(0, -7px, 0)
 }
+

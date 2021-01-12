@@ -83,5 +83,26 @@ var swiper = new Swiper('.swiper-container2', {
       slidesPerView: 4,
       spaceBetween: 30
     },
+  },
+  on: {
+    init: function() {
+      checkArrow();
+    },
+    resize: function () {
+      checkArrow();
+    }
   }
 });
+
+function checkArrow() {
+  var swiperPrev = document.querySelector('.swiper-button-prev');
+  var swiperNext = document.querySelector('.swiper-button-next');
+  if ( window.innerWidth > 1024  ) {
+    console.log('Success', window.innerWidth);
+    swiperPrev.style.display = 'block';
+    swiperNext.style.display = 'block';
+  } else {
+    swiperPrev.style.display = 'none';
+    swiperNext.style.display = 'none';
+  }
+}
