@@ -5,6 +5,7 @@
         startEvent: "load"
     });
 
+// Contador
 var e = document.querySelectorAll('[data-toggle="countup"]');
 
 function o(e) {
@@ -28,7 +29,7 @@ function o(e) {
     }
 });
 
-
+// header fixed
 var header = new Headroom(document.querySelector("#header"), {
 tolerance: 5,
 offset : 205,
@@ -40,15 +41,17 @@ classes: {
 });
 header.init();
 
-
+// slider documentos
 var swiper = new Swiper('.swiper-container', {
   direction: 'vertical',
+  slidesPerView: 2,
+  spaceBetween: 15,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 });
-
+// slider Componenetes
 var swiper = new Swiper('.swiper-container2', {
   slidesPerView: 4,
   spaceBetween: 30,
