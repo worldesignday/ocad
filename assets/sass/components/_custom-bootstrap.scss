@@ -51,6 +51,18 @@
 	border-bottom:1px solid $brand-color;
 	padding-left:0;
 	font-size: $size-14;
-	
 
+
+}
+//paddings
+@media (max-width: $break-md) {
+	.p-sm-5{
+		padding: 3rem
+	}
+	.mb-sm-5{
+		margin-bottom: 3rem
+	}
+	.border-md-bottom{
+		border-bottom:1px solid $color-negro-10;
+	}
 }
