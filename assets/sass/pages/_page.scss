@@ -1,0 +1,120 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss pages.
+// -----------------------------------------------------------------------------
+
+
+.grid-valores{
+   @include color-desborde($brand-color-light);
+    h2{
+        color:$brand-color;
+   }
+}
+
+// sections
+#destacado{
+    position: relative;
+    &::before{
+        content: '';
+        background: $brand-color-light;
+        width: 100%;
+        height: 20%;
+        z-index: 0;
+        position:absolute;
+
+    }
+    .card{
+        .bg-brand-color{
+            border-bottom-left-radius: 20px;
+            @media (max-width: $break-md) {
+                border-bottom-left-radius: 0px;
+            }
+        }
+    }
+    h3,
+    p{
+        color:$color-negro-0;
+    }
+    p{
+        font-weight: 300;
+        color: $color-negro-0 !important;
+    }
+
+
+}
+.title-txt{
+     @media (max-width: $break-md) {
+            padding-top:1rem;
+        }
+}
+#round-title{
+    border-bottom-right-radius: 40px;
+    background:$brand-color-light;
+    z-index: 1;
+    @media (max-width: $break-md) {
+        border-radius:0;
+    }
+
+}
+#def{
+    margin-top: -40px;
+    @include color-desborde($brand-color);
+    position:relative;
+    z-index: 0;
+    padding-bottom: 5rem;
+    @media (max-width: $break-md) {
+         margin-top: 0px;
+         padding-top: 1rem;
+         a{
+            margin-bottom: 2rem;
+         }
+    }
+    .col-def-body{
+        @media (max-width: $break-md) {
+            margin-top: 2rem;
+        }
+        p{
+            color:$color-negro-0;
+            font-weight: 300;
+        }
+    }
+
+}
+#metodo{
+    position:relative;
+    @include color-desborde($brand-color-light);
+     background:$brand-color-light url(/assets/images/home-background-image-3.jpg) no-repeat;
+     background-size:cover;
+     background-position: bottom right;
+    @media (max-width: $break-md) {
+        background: $brand-color-light;
+
+    }
+    >.row.d-flex{
+      @media (max-width: $break-md) {
+        padding: 2rem 0;
+
+    }  
+    }
+    .metodo-buttons{
+        margin-top: -4.5rem;
+        padding-top:5.5rem !important;
+        border:4px solid $brand-color-dark;
+        border-radius:20px;
+        position:relative;
+        z-index: 0;
+    }
+    .trg-wrap{
+        z-index: 2;
+    }
+    p{
+        margin-bottom:0.5rem;
+    }
+    ul{
+        padding-left: 0;
+    }
+    li{
+        list-style: none
+    }
+    
+}

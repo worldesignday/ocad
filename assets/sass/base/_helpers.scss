@@ -84,9 +84,16 @@
   .pt-md-11, .py-md-11 {
     padding-top: 6rem!important;
   }
+  .pt-md-15, .py-md-15 {
+    padding-top: 9rem!important;
+  }
   .text-md-left {
     text-align: left!important;
   }
 }
-
+@media (max-width: 768px){
+  .border-40-bl{
+    border-radius: 10px;
+  }
+}
 

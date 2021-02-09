@@ -1,0 +1,116 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends ../page-templates/tpl_page.pug
+
+block title
+    title OCAD - Acerca de Nosotros
+block breadcrum
+    section.block--breadcrum
+        .container
+            nav(style='--bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'currentColor\'/%3E%3C/svg%3E");' aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='/') Inicio 
+                    li.breadcrumb-item.active(aria-current='page') Acerca del OCAD 
+block title-page
+    section.bg-brand-color-light.pt-4.pb-4
+        .container
+            .row
+                .col-12.col-md-10.col-lg-9.col-xl-8
+                    .pre--h1.mt-4
+                        |Acerca del OCAD
+                    h2 Observatorio Colombiano de Atención Domiciliaria
+
+block destacado
+    section#destacado.mb-md-5
+        .container
+            .row
+                .col
+                    .card.flex-md-row.no-gutters.rounded-0.border-0
+                        .col-md-3.col-lg-4.p-4.p-lg-5.bg-brand-color.d-flex.align-items-center                                  
+                            .card-body--title
+                                h3 Nosotros
+                                p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .card-img
+                            img(class="img-fluid" src="/assets/images/parallax-image-docs.jpg")
+
+
+block contenido
+    .container
+        section
+            .row
+                .col
+                    .d-md-flex.flex-md-row.align-items-center
+                        .col-md-3.col-lg-4.p-md-4.p-lg-5
+                            .blockquote
+                                |“Sistematizar datos nacionales sobre atención domiciliaria y convertirlos en información útil y accesible”
+                        .col-xl-7.body-txt
+                            h4 Misión
+                            p
+                                |El Observatorio Colombiano de Atención Domiciliaria, es un sistema de información que permite monitorear el desarrollo de servicios de salud en el domicilio de pacientes en extensión hospitalaria, rehabilitación, consulta médica, cuidado crónico, cuidados paliativos, promoción de la salud y prevención de la enfermedad.
+            .row
+                .col
+                    .d-md-flex.flex-md-row.align-items-center
+                        .col-md-3.col-lg-4.p-md-4.p-lg-5
+                            .blockquote
+                                |“Ser referente regional y nacional en la generación de información e influir positivamente en la toma de decisiones sobre atención domiciliaria”
+                        .col-xl-7.body-txt
+                            h4 Visión
+                            p
+                                |Para el 2023, el Observatorio Colombiano de Atención Domiciliaria, será reconocido a nivel regional y nacional como referente en la generación de información, que permita a los hacedores de políticas públicas la toma de decisiones informadas, a los aseguradores el reconocimiento de las necesidades en salud de la población, a los proveedores la implementación de mejoras continuas en el proceso de atención, y a los pacientes y sus familias el acceso a información confiable.
+            .row.border-top.mt-4
+                .col
+                    .d-md-flex.flex-md-row.align-items-center
+                        .col-md-3.col-lg-4.p-md-4.p-lg-5
+                            .title-txt
+                                h2 Objetivos
+                        .col-xl-7.body-txt
+                            p
+                                |Sistematizar información relacionada con la implementación de servicios de salud en el domicilio, con el fin de incidir en la toma de decisiones en el ámbito público, mejorar la calidad en la atención en salud y favorecer la consulta de los pacientes y sus familias.
+
+            .row.p-md-4.p-3.bg-brand-color-light.grid-valores
+                .col.pb-4.mt-md-4
+                    h2 Valores
+                .grid.col-12
+                    .row(data-masonry='{"percentPosition": true }') 
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700")
+                            h3 Responsabilidad
+                            p Nos comprometemos a la recolección, sistematización y promulgación de información relacionada con atención domiciliaria para incidir en la legislación nacional y favorecer la mejora en la calidad en el Sistema de Salud Colombiano.
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700")
+                            h3 Trabajo en Equipo
+                            p Trabajamos cooperativamente con los diferentes actores del sistema de salud colombiano, hacedores de políticas, aseguradores, prestadores, pacientes y familias, buscando impactar positivamente la prestación de servicios de salud domiciliarios.
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700")
+                            h3 Integridad
+                            p Actuamos con honestidad y rectitud en el manejo de la información, siendo fieles a la verdad, sin favorecimientos particulares y declarando posibles conflictos de interés.
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700")
+                            h3 Flexibilidad
+                            p Tenemos la capacidad de adaptarnos a los cambios internos y externos, para brindar información actualizada al consultor.
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700")
+                            h3 Transparencia
+                            p Brindamos información verdadera, clara y verificable.
+            .row.mt-4
+                .col
+                    .d-md-flex.flex-md-row.align-items-center
+                        .col-md-3.col-lg-4.p-md-4.p-lg-5
+                            .title-txt
+                                h2 Equipo Editorial
+                        .body-txt.col-xl-7
+                            p
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+        section.mt-5.mb-5
+            .row
+                .overlay.overlay-black.overlay-40(data-jarallax data-speed="0.8" style="background-image: url(/assets/images/parallax-image-contacto.jpg);")
+                    .row.d-flex.justify-content-end.pt-md-15.pt-5
+                        .col-10.col-md-3.bg-brand-color.position-relative.ms-5.p-3
+                            h4.white-color.pt-5.fs-6 Contáctenos
+                            p.brand-color-dark
+                                |Jan Chudooelka<br>+1 (805) 235-0809<br>jan.chudooelka@gmail.com
+                            p.pt-3.brand-color-dark
+                                |Sí desea participar en la Encuesta Nacional del OCAD diligencia la encuesta.
+                            p
+                                a(href="" class="btn btn-primary-line--white " ) Participar

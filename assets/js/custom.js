@@ -1,7 +1,7 @@
 "undefined" != typeof AOS && AOS.init({
         duration: 700,
         easing: "ease-out-quad",
-        once: !0,
+        //once: !0,
         startEvent: "load"
     });
 

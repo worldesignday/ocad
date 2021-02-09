@@ -7,7 +7,6 @@
 // sections
 
 #hero{
-    margin-top: 76px;
 	.hero--body{
 		@media (max-width: $break-md) {
 			margin-top:1rem;
@@ -238,17 +237,7 @@
             background: var(--bs-white);
         }
     }
-    .overlay{
-        &::after{
-            content: url(/assets/images/corner-left.png);
-            bottom: 0;
-            left: 0;
-            z-index: 5;
-            position: absolute;
-            width: 38px;
-            height: 35px;
-        }
-    }
+    
     .wrap{
         position:relative;
         z-index: 2;

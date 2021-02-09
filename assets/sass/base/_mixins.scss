@@ -69,6 +69,30 @@
     &::after {
         left: auto;
         right: 100%;
+        width: 100%;
+    }
+    &::before{
+        width: 100%;
+    }
+}
+// Desborde Color
+@mixin color-desborde-top($background: false) {
+    @if $background {background: $background;}
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        background: $background;
+        display: block;
+        height: 20%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: -5;
+    }
+    &::after {
+        left: auto;
+        right: 100%;
         width: 10%;
     }
     &::before{

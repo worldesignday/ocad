@@ -32,13 +32,20 @@
     <body>
       <header class="header header--fixed hide-from-print" id="header">
         <div class="navbar navbar-expand-lg navbar-light bg-white">
-          <div class="container"><a class="navbar-brand" href="#"> <img class="d-sm-none d-lg-block d-none" src="/assets/images/logo-ocad.png"><img class="d-lg-none d-sm-block" src="/assets/images/logo-ocad-responsive.png"></a>
+          <div class="container"><a class="navbar-brand" href="/"> <img class="d-sm-none d-lg-block d-none" src="/assets/images/logo-ocad.png"><img class="d-lg-none d-sm-block" src="/assets/images/logo-ocad-responsive.png"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
-                <li class="nav item"> <a class="nav-link">Inicio</a></li>
-                <li class="nav item"> <a class="nav-link">Acerca del Ocad</a></li>
-                <li class="nav item"> <a class="nav-link">Portal de Datos</a></li>
+                <li class="nav item"> <a class="nav-link" href="/">Inicio</a></li>
+                <li class="nav item"> <a class="nav-link" href="/page-templates/pages/about.html">Acerca del Ocad</a></li>
+                <li class="nav-item dropdown dropdown-animate"><a class="nav-link-dropdown dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Portal de Datos</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dominios</a></li>
+                    <li><a class="dropdown-item" href="#">Componentes</a></li>
+                    <li><a class="dropdown-item" href="/page-templates/pages/definiciones.html">Definiciones</a></li>
+                    <li><a class="dropdown-item" href="/page-templates/pages/metodo.html">Método</a></li>
+                  </ul>
+                </li>
                 <li class="nav item"> <a class="nav-link">Publicaciones</a></li>
               </ul><a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">Contáctenos</a>
             </div>
@@ -55,7 +62,7 @@
               <div class="titlepre">Lanzamiento</div>
               <h1>Observatorio Colombiano de Atención Domiciliaria</h1>
               <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
-              <div><a class="btn btn-primary shadow btn-lg lift " href="">Acerca del Observatorio<i class=" d-md-inline ms-1" data-feather="arrow-right"></i></a><a class="btn btn-primary-line btn-lg lift ms-2 mt-md-3 mt-lg-0 " href="">Método</a></div>
+              <div><a class="btn btn-primary shadow btn-lg lift " href="/page-templates/pages/about.html">Acerca del Observatorio<i class=" d-md-inline ms-1" data-feather="arrow-right"></i></a><a class="btn btn-primary-line btn-lg lift ms-2 mt-md-3 mt-lg-0 " href="/page-templates/pages/metodo.html">Método</a></div>
             </div>
           </div>
         </div>
