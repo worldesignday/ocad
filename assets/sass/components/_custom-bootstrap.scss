@@ -114,6 +114,36 @@
 	}
 }
 
+// pills
+
+.nav-pills{
+	.nav-link{
+		border-color:$color-negro-10;
+		background-color: $color-negro-0;
+		border-width: 1px;
+    	box-shadow: none;
+
+    	&:hover{
+    		&::before{
+    			background: transparent;
+    		}
+    		&::after{
+    			background: transparent;
+    		}
+    	}
+    	&:focus{
+    		border-color:transparent;
+    	}
+		&.active{
+			background-color:tomato;
+			border-color:tomato;
+			color:$color-negro-0 !important;
+		}
+
+	}
+}
+
+
 //
 .lead{
 	color:var(--bs-gray-dark);

@@ -39,6 +39,15 @@ h5{
 p{
 	color:var(--bs-gray-dark);
 }
+.text-blue{
+	color:var(--bs-blue);
+}
+.text-warning{
+	color:var(--bs-warning) !important;
+}
+.f-inherit{
+	font-family: inherit !important;
+}
 // Nav dropdown
 @media (max-width: $break-lg) {
 	.nav.item,
@@ -272,7 +281,6 @@ p{
 //}
 // footer
 footer{
-	background-color:$brand-color-light;
 	//border-top:1px solid $color-negro-10;
 	padding-bottom: 2rem;
 	.feather{
@@ -447,4 +455,5 @@ footer{
 	box-shadow: 0 2rem 5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .05)!important;
 	transform: translate3d(0, -7px, 0)
 }
+
 
