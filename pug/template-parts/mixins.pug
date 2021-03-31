@@ -1,0 +1,49 @@
+//- card dominio
+mixin dominio-card(refimg, titlecard, linkdominio)
+	a(class="card lift lift-lg" href="#")
+		span.card--id
+		.card-body
+			.row.row-cols-2
+				.col-12.col-md-12.col-lg-4
+					.card--icon
+						img(src=refimg)
+				.col-12.col-md-12.col-lg-8.d-flex.align-items-end
+					h3
+						= titlecard
+				.col-12
+					.card--body
+						block
+				.col-12
+					span(class="btn--custom")
+						|ver más
+						i(class=" d-md-inline ms-1" data-feather="arrow-right")
+mixin simple-card(basictitlecard,linkcomponente)
+	.card.border-0
+		h3
+			= basictitlecard
+		p
+			block
+		div
+			a(href=linkcomponente class="btn btn--custom xl-0" )
+				|ver más
+				i(class="d-md-inline ms-1" data-feather="arrow-right")
+
+mixin simple-count(datafrom,datato, counter,titlecounter)
+	.col-sm-6.col-md-6.col-lg-3.mb-4
+		.card.border-0.text-center
+			h3.display-4
+				span(data-toggle="countup" data-from=datafrom data-to=datato data-aos="" data-aos-id="countup:in")
+					= counter
+			h4.fs-5
+				= titlecounter
+
+mixin card(titlecard,linkcard)
+		.card.border-0.mb-4
+			h4
+				= titlecard
+			p
+				block
+			div
+				a(href=linkcard class="btn btn--custom" )
+					|Ver más
+					i(class="d-md-inline ms-1" data-feather="arrow-right")

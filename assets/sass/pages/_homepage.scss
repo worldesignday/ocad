@@ -1,0 +1,286 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss homepage.
+// -----------------------------------------------------------------------------
+
+
+// sections
+
+#hero{
+	.hero--body{
+		@media (max-width: $break-md) {
+			margin-top:1rem;
+		}
+	}
+}
+
+#dominios{
+	position: relative;
+	@media (max-width: $break-xl) {
+		margin-top:2rem;
+	}
+	.grid{
+		@media (max-width: $break-lg) {
+			margin-top:2rem;
+		}
+	}
+    &::before{
+        content: "";
+        background: $brand-color;
+        display: block;
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: -1rem;
+        left: 0;
+        z-index: -5;
+        border-bottom-right-radius: 40px;
+        @media (max-width: $break-xl) {
+			top:0rem;
+		}
+		@media (min-width: $break-xxl) {
+			top:-3rem;
+		}
+    }
+
+    h2,
+    .lead,
+    .titlepre{
+    	color:var(--bs-white);
+    }
+    a{
+        text-decoration: none;
+        &:hover{
+            //background:$brand-color-light;
+            .card--id{
+                background:$brand-color !important;
+            }
+        }
+
+    }
+    .card{
+    	border-radius:20px;
+    	h3{
+    		padding-top: 1.3rem;
+    	}
+    	&--icon{
+    		padding: 1rem;
+    	}
+    	&--body{
+    		padding: 1rem;
+    	}
+        &--body{
+            color:var(--bs-gray-dark);
+        }
+        &--id{
+            width: 30px;
+            height: 30px;
+            border-radius:30px;
+            position:absolute;
+            right: 1rem;
+            top: 1rem;
+            //background:var(--bs-indigo);
+        }
+
+    }
+    .titlepre{
+    	&::before{
+    		background:var(--bs-white);
+    	}
+    }
+    .row{
+        .col-sm-6{
+            &:nth-child(1){
+                .card{
+                    &--id{
+                        background: #ADCE6F;
+                    }
+                }
+            }
+            &:nth-child(2){
+                .card{
+                    &--id{
+                        background: #A6D6CC;
+                    }
+                }
+            }
+            &:nth-child(3){
+                .card{
+                    &--id{
+                        background: #72C1A3;
+                    }
+                }
+            }
+            &:nth-child(4){
+                .card{
+                    &--id{
+                        background: #FFF7A9;
+                    }
+                }
+            }
+            &:nth-child(5){
+                .card{
+                    &--id{
+                        background: #F9BB7C;
+                    }
+                }
+            }
+            &:nth-child(6){
+                .card{
+                    &--id{
+                        background: #F7C3DC;
+                    }
+                }
+            }
+        }
+        
+    }
+    .btn--custom{
+        padding:1rem;
+    }
+
+}
+#componentes{
+	position: relative;
+	background: $brand-color-light;
+	border-bottom-left-radius: 40px;
+	&::before{
+        content: "";
+        background: $brand-color-light;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -10rem;
+        left: 0;
+        z-index: -5;
+        
+    }
+    .card{
+    	background:none;
+    }
+    .swiper-container2 {
+      width: 100%;
+      height: 100%;
+    }
+
+
+}
+#cifras{
+	position: relative;
+	background: $brand-color-dark;
+	border-bottom-right-radius: 40px;
+	padding-bottom:6rem;
+    @media (max-width: $break-md) {
+            padding-top:4rem !important;
+            .titlepre{
+                padding-left: 0;
+            }
+        }
+	&::before{
+        content: "";
+        background: $brand-color-dark;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -10rem;
+        left: 0;
+        z-index: -5;
+        
+    }
+    .container{
+    	&::before{
+    		content: url('/assets/images/bg-cifras.png');
+    		position:absolute;
+    		opacity: 0.2;
+    		top:-2rem;
+            @media (max-width: $break-md) {
+                opacity: 0.05;
+            }
+
+    	}
+    }
+    h2,
+    .lead,
+    .titlepre{
+    	color:var(--bs-white);
+    }
+    .card{
+    	background:none;
+    	color:var(--bs-white);
+    	h3{
+    		color:var(--bs-white);
+            font-weight: 600;
+    	}
+    	h4{
+    		font-weight: 300;
+    		padding: 0  2rem; 
+            color:var(--bs-white);
+    	}
+         @media (max-width: $break-md) {
+            border-top:1px solid rgba(255,255,255, 0.2) !important;
+            padding-top: 2rem;
+         }
+    }
+    .btn{
+    	background: none;
+    	color:var(--bs-white);
+    }
+}
+#documentos{
+    margin-top: -3rem;
+    margin-bottom: 5rem;
+    .titlepre{
+        color:var(--bs-white);
+        &::before{
+            background: var(--bs-white);
+        }
+    }
+    
+    .wrap{
+        position:relative;
+        z-index: 2;
+        padding-bottom: 3rem;
+    }
+    h2{
+        color:var(--bs-white);
+    }
+
+   .swiper-container {
+     width: 100%;
+     height: 100%;
+     background:var(--bs-white);
+     padding: 0rem 2.5rem 1rem 1.5rem;
+   }
+
+   .swiper-slide {
+     font-size: 18px;
+     background: #fff;
+     height: 200px !important;
+     background:none;
+     /* Center slide text vertically */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-bottom:1px solid $color-negro-60 !important;
+   }
+    .card{
+        p{
+            font-size: 1rem;
+            color:$color-negro-50;
+        }
+        //padding-top:2rem;
+        background:none;
+        
+        border-radius:0;
+    }
+
+}
+
+footer{
+    small{
+        font-size: $size-13;
+        color: $color-negro-50;
+    }
+}

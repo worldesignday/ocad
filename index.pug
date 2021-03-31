@@ -1,0 +1,201 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends pug/page-templates/tpl_master.pug
+
+block title
+    title OCAD
+block contenido
+    include pug/template-parts/hero.pug 
+    // Seccion Dominios
+    section.pt-4.pt-md-11#dominios
+        .container
+            .row
+                .col-12.col-md-12.col-lg-4
+                    .titlepre
+                        |Portal de datos
+                    h2 Dominios OCAD
+                    p.lead 
+                        |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                    div
+                        a(href="" class="btn btn-primary-line--white btn-lg" ) Consultar
+                            i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
+                .grid.col-12.col-md-12.col-lg-8
+                    .row(data-masonry='{"percentPosition": true }') 
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700")
+                            +dominio-card('/assets/images/icons/normatividad-icon.svg', 'Normatividad', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4(data-aos="fade-up" data-aos-duration="700" data-aos-delay="50")
+                            +dominio-card('/assets/images/icons/contexto-icon.svg', 'Contexto sociodemográfico y epidemiológico', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/servicios-icon.svg', 'Servicios de atención domiciliaria', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/talento-icon.svg', 'Talento humano', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/familia-icon.svg', 'Pacientes y familias', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                        .col-sm-6.mb-4
+                            +dominio-card('/assets/images/icons/provision-icon.svg', 'Provisión de atención', '#')
+                                |Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+
+    // Seccion Componentes
+    section.pt-4.pb-5#componentes
+        .container
+            .titlepre
+                |Portal de datos
+            h2.mb-5 Componentes
+            .row(style="overflow:hidden;")
+                .swiper-container2
+                    .swiper-wrapper
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-duration="700")
+                                +simple-card('Consulta externa general y especializada', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-delay="50" data-aos-duration="700")
+                                +simple-card('Hospitalización paciente agudo', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-delay="100" data-aos-duration="700")
+                                +simple-card('Cuidados paliativos', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12(data-aos="fade-up" data-aos-delay="150" data-aos-duration="700")
+                                +simple-card('Hospitalización paciente crónico con ventilador', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                        .swiper-slide
+                            .col-12
+                                +simple-card('Lorem ipsum dolor sit ametr', '#')
+                                    |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                    .swiper-pagination
+                    .swiper-button-prev
+                    .swiper-button-next
+
+    // Seccion Cifras
+    section.pt-4.pt-md-11#cifras
+        .container
+            .titlepre.text-center
+                |Cifras
+            h2.text-center Atención domiciliaría hoy en colombia
+            p.lead.text-center.mb-5
+                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+            .row
+                +simple-count('1000', '1106', '','Servicios de atención Domiciliaria')
+                +simple-count('1300','1432', '','Oferta de servicios para población pediatríca')
+                +simple-count('200','267','','Programas de cuidado al cuidador familiar')
+                +simple-count('50','100', '','Cuidados de enfermeríaen atención domiciliaria')
+            .row.justify-content-center
+                div.w-auto.mt-4
+                    a(href="" class="btn btn-primary-line btn-lg lift ms-2 mt-md-3 mt-lg-0" )
+                        |Diligenciar Encuesta
+                        i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
+
+    // Seccion Documentos
+    section#documentos
+        .container
+            .pt-md-11.overlay.overlay-black.overlay-40(data-jarallax data-speed="0.8" style="background-image: url(/assets/images/parallax-image-docs.jpg);")
+                .row.justify-content-center.wrap
+                    .col-12.col-md-5.p-sm-5
+                        .titlepre
+                            |Portal de datos
+                        h2 Documento técnico Observatorio Colombiano de atención Domiciliaria
+                        div
+                            a(href="" class="btn btn-primary-line--white btn-lg" ) Consultar
+                                i(class=" d-none d-md-inline ms-1" data-feather="arrow-right")
+
+                    .col-12.col-md-5
+                        .row.justify-content-center.pt-4
+                            .col-md-8.col-10(style="overflow:hidden; height:400px;")
+                                .swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            +card('Documento técnico 1', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                        .swiper-slide
+                                            +card('Documento técnico 2', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                        .swiper-slide
+                                            +card('Documento técnico 3', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                        .swiper-slide
+                                            +card('Documento técnico 4', '#')
+                                                |Lorem ipsum dolor sit amet, sed diam nonumy eirmod.
+                                    .swiper-pagination
+
+                        
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+            
+
+
+
+    
+
+            
+
+    

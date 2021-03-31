@@ -1,0 +1,470 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss bootstrap.
+// -----------------------------------------------------------------------------
+
+body{
+	overflow-x: hidden;
+}
+// Headings
+h1{
+	@include font-set('Fira Sans', $size-50, var(--bs-dark), 0,  1.2);
+	@media (max-width: $break-lg) {
+		font-size: $size-34;
+	}
+	font-weight: 600;
+}
+h2{
+	@include font-set('Fira Sans', $size-40, var(--bs-dark), 0,  1.2);
+	font-weight: 600;
+	@media (max-width: $break-lg) {
+		font-size: $size-30;
+	}
+}
+h3{
+	@include font-set('Fira Sans', $size-26, var(--bs-dark), 0,  1.2);
+	font-weight: 600;
+}
+h4{
+	@include font-set('Fira Sans', $size-22, var(--bs-dark), 0,  1.2);
+	font-weight: 600;
+}
+
+h5{
+	font-size: $size-14 !important;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px !important	;
+}
+p{
+	color:var(--bs-gray-dark);
+}
+.text-blue{
+	color:var(--bs-blue);
+}
+.text-warning{
+	color:var(--bs-warning) !important;
+}
+.f-inherit{
+	font-family: inherit !important;
+}
+.hyphenate {
+  /* Careful, this breaks the word wherever it is without a hyphen */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  /* Adds a hyphen where the word breaks */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+// Nav dropdown
+@media (max-width: $break-lg) {
+	.nav.item,
+	.nav-item{
+		border-bottom:1px solid $color-negro-10;
+		padding: 0.5rem 0;
+		.nav-link-dropdown{
+			padding-left: 0;
+		}
+	}
+	.navbar-btn {
+		margin: 1rem 0;
+	}
+
+	.dropdown-menu{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		li{
+			border-bottom:1px solid $color-negro-10;
+			padding: 0.5rem 0;
+			&:last-child{
+				border-bottom:0 !important;
+			}
+			a{
+
+			}
+		}
+	}
+}
+/* ============ desktop view ============ */
+@media all and (min-width: $break-lg) {
+	.dropdown-menu{
+		//border:0;
+		li{
+			border-bottom:1px solid $color-negro-10;
+			&:last-child{
+				border-bottom:0 !important;
+			}
+			a{
+				position:relative;
+				font-size: $size-15;
+				color:$color-negro-60;
+				font-weight: 400;
+				&:hover{
+					background:none;
+					text-decoration: none
+				}
+			}
+			a:before,
+			a:after {
+			  content: '';
+			  position: absolute;
+			  top: 100%;
+			  width: 0;
+			  height: 2px;
+			  background: tomato;
+			  transition: .3s;
+			}
+
+			a:before {
+			  left: 0;
+			}
+
+
+			a:hover:before {
+			  width: 100%;
+			}
+		}
+	}
+	.dropdown:hover .dropdown-menu {
+    	display: block;
+    	margin-top: 0; // remove the gap so it doesn't close
+    	animation: show-dropdown .3s ease forwards; 
+ 	}
+}
+
+
+@keyframes show-dropdown {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(-3px) scale(0.9);
+    transition: all .3s ease; }
+  100% {
+    transform: translateX(0) translateY(-3px) scale(1);
+    opacity: 1; } }
+
+@keyframes hide-dropdown {
+  from {
+    opacity: 1;
+    transform: translateX(-16px) translateY(-3px) scale(1);
+    transition: all .3s ease; }
+  to {
+    opacity: 0;
+    transform: translateX(-16px) translateY(-3px) scale(0.97); } }
+
+// buttons
+
+.btn{
+	&-primary{
+		&-soft {
+		    background-color: $brand-color-light;
+		    color: #335eea;
+		    //padding: .8125rem 1.25rem;
+		    font-size: $size-16;
+		    border:1px solid $brand-color-light;
+		    &:hover{
+				text-decoration: none;
+				background-color: $brand-color-s;
+				border-color:$brand-color-s;
+			}
+		}
+		&-line{
+			background-color: $color-negro-0;
+		    color: $brand-color;
+		    //padding: .8125rem 1.25rem;
+		    font-size: $size-16;
+		    border:2px solid $brand-color;
+		    @media (max-width: $break-lg) {
+				padding: .6125rem 0.9rem;
+			}
+		    &:hover{
+				text-decoration: none;
+				background-color: $brand-color-light;
+				color: $brand-color-s;
+			}
+			&--white{
+				border:2px solid var(--bs-white);
+				color:var(--bs-white);
+				//padding: .8125rem 1.25rem;
+		    	font-size: $size-16;
+		    	 &:hover{
+					text-decoration: none;
+					background-color: $brand-color-light;
+					color: $brand-color-s;
+				}
+			}
+		}
+	}
+	&--custom{
+		@include font-set('Fira Sans', $size-18, var(--bs-blue), 0,  1.2);
+		font-weight: 600;
+	}
+	&--nolink{
+		@include font-set('Fira Sans', $size-18, var(--bs-blue), 0,  1.2);
+		font-weight: 600;
+	}
+
+}
+
+// custom-clases
+.titlepre{
+	text-transform:uppercase;
+	font-size: $size-13;
+	letter-spacing: 2px;
+	margin-bottom: 0.3rem;
+	position: relative;
+	padding-left: 30px;
+
+	&::before{
+		content: '';
+		width: 20px;
+		height: 1px;
+		background-color:var(--bs-dark);
+		position: absolute;
+		top:8px;
+		left: 0;
+	}
+}
+.brand-color{
+	color:$brand-color;
+}
+.brand-color-dark{
+	color:$brand-color-dark !important;
+}
+.white-color{
+	color:$color-negro-0;
+}
+.bg-brand-color{
+	background: $brand-color;
+}
+.bg-brand-color-light{
+	background: $brand-color-light;
+}
+.bg-color-w{
+	background: $color-negro-0;
+}
+.pre--h1{
+    @include font-set('', $size-13, $color-negro-50, 0,  1.2);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom:1rem;
+	position: relative;
+	padding-left:2rem;
+	&::before{
+		content: '';
+		position:absolute;
+		width: 25px;
+		height: 1px;
+		background:$color-negro-50;
+		left:0;
+		top: 5px;
+	}
+}
+.blockquote{
+	@include font-set('', $size-15, $brand-color, 0,  1.2);
+	@media (max-width: $break-md) {
+        padding-top:1rem;
+        border-top: 1px solid $color-negro-10;
+    }
+}
+.overlay{
+    &::after{
+        content: url(/assets/images/corner-left.png);
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        position: absolute;
+        width: 38px;
+        height: 35px;
+    }
+}
+//.trg{
+//  margin:0 auto;
+//  width:0px;
+//  height:0px;
+//  border-left:160px solid $color-negro-0;
+//  border-right:165px solid $color-negro-0;
+//  border-bottom:0 solid $color-negro-0;
+//  border-top:55px solid $brand-color;
+//}
+// footer
+footer{
+	//border-top:1px solid $color-negro-10;
+	padding-bottom: 2rem;
+	.feather{
+		width: 36px;
+  		height: 36px;
+  		stroke-width: 1;
+	}
+}
+// Parallax
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    /* support for plugin https://github.com/bfred-it/object-fit-images */
+    font-family: 'object-fit: cover;';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+//overlay
+.overlay{
+	position: relative;
+	&::before {
+	    content: "";
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    border-radius: inherit;
+	    z-index: 0;
+	}
+	&-black::before {
+    	background-color: #161c2d;
+	}
+	&-80::before {
+    	opacity: .8;
+	}
+	&-60::before {
+    	opacity: .6;
+	}
+	&-40::before {
+    	opacity: .4;
+	}
+
+}
+
+// headroom
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+ .header--fixed {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.animated {
+	animation-duration: .5s;
+	animation-fill-mode: both;
+	will-change: transform, opacity
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%)
+	}
+	100% {
+		-webkit-transform: translateY(0)
+	}
+}
+
+@-moz-keyframes slideDown {
+	0% {
+		-moz-transform: translateY(-100%)
+	}
+	100% {
+		-moz-transform: translateY(0)
+	}
+}
+
+@-o-keyframes slideDown {
+	0% {
+		-o-transform: translateY(-100%)
+	}
+	100% {
+		-o-transform: translateY(0)
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%)
+	}
+	100% {
+		transform: translateY(0)
+	}
+}
+
+.animated.slideDown {
+	animation-name: slideDown
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(0)
+	}
+	100% {
+		-webkit-transform: translateY(-100%)
+	}
+}
+
+@-moz-keyframes slideUp {
+	0% {
+		-moz-transform: translateY(0)
+	}
+	100% {
+		-moz-transform: translateY(-100%)
+	}
+}
+
+@-o-keyframes slideUp {
+	0% {
+		-o-transform: translateY(0)
+	}
+	100% {
+		-o-transform: translateY(-100%)
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(0)
+	}
+	100% {
+		transform: translateY(-100%)
+	}
+}
+
+.animated.slideUp {
+	animation-name: slideUp
+}
+
+
+//Hover animations
+
+//lift
+
+.lift {
+	-webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
+	transition: box-shadow .25s ease, -webkit-transform .25s ease;
+	transition: box-shadow .25s ease, transform .25s ease;
+	transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease
+}
+
+.lift:focus,
+.lift:hover {
+	box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .1)!important;
+	transform: translate3d(0, -3px, 0)
+}
+
+.lift-lg:focus,
+.lift-lg:hover {
+	box-shadow: 0 2rem 5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .05)!important;
+	transform: translate3d(0, -7px, 0)
+}
+
+

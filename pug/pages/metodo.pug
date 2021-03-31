@@ -1,0 +1,91 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends ../page-templates/tpl_page.pug
+
+block title
+    title OCAD - Definiciones
+block breadcrum
+    section.block--breadcrum
+        .container
+            nav(style='--bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'currentColor\'/%3E%3C/svg%3E");' aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='/') Inicio 
+                    li.breadcrumb-item.active Portal de Datos
+                    li.breadcrumb-item.active(aria-current='page') Método
+block title-page
+    section.bg-brand-color-light.pt-4.pb-4.position-relative
+        .container
+            .row
+                .col-12.col-md-10.col-lg-9.col-xl-8
+                    .pre--h1.mt-4
+                        |Portal de Datos
+                    h2 Método
+block contenido
+    section#metodo.bg-brand-color-light
+        .container
+            .row
+                .col-12.col-md-10.col-lg-9.col-xl-8.border-top.pt-5
+                    p
+                        |Para la construcción de los dominios e indicadores utilizados para evaluar el desarrollo de los SAD en Colombia se utilizó un modelo de consenso RAND/UCLA1, en el cual se invitó a expertos clínicos y de gestión en salud de programas de atención domiciliaria, con el fin de identificar dimensiones de evaluación e indicadores. El proceso utilizado se explica en el siguiente modelo.
+            .row.d-flex.justify-content-center.mt-md-5.pb-md-5
+                .col-12.col-md-10.col-lg-6.col-xl-6
+                    .row.d-flex.justify-content-center.g-0(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.bg-brand-color.text-center.p-4
+                            h3 Revisión de literatura y análisis de la evidencia
+                    .row.d-flex.justify-content-center.g-0(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.bg-brand-color.text-center.p-4.mt-1.trg-wrap.position-relative
+                            h3 Lista de indicadores y definiciones
+                    .row.d-flex.justify-content-center.g-0.position-relative(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.trg-wrap.g-0
+                            .trg
+                                img(class="img-fluid w-100" src="/assets/images/trg.svg")
+                    .row.metodo-buttons.bg-color-w(data-aos="fade-up" data-aos-duration="700")
+                        .col-12.text-center
+                            h3 Consenso de expertos en atención domiciliaria y salud pública 
+                        .col-md-6.text-center.mt-3
+                            a( href="#" class="btn btn-primary-line btn-lg lift ms-2 mt-md-3 mt-lg-0 ")
+                                |1ra ronda: sin interacción
+
+                        .col-md-6.text-center.mt-3  
+                            a( href="#" class="btn btn-primary-line btn-lg lift ms-2 mt-md-3 mt-lg-0 ")
+                                |2da ronda: sin interacción
+                        .col.text-center.mt-3
+                            p
+                                |Criterios utilizados  para la evaluación:
+                                ul
+                                    li  • Factibilidad
+                                    li  • Relevancia
+                    .row.d-flex.justify-content-center.g-0(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.bg-brand-color.text-center.p-4
+                            h3 Valoración retrospectiva  Disponibilidad de datos  para la trazabilidad del  indicador.
+                    .row.d-flex.justify-content-center.g-0(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.bg-brand-color.text-center.p-4.mt-1.trg-wrap.position-relative
+                            h3 Valoración prospectiva  Capacidad de incidir en la agenda pública.
+
+                    .row.d-flex.justify-content-center.g-0.position-relative(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.trg-wrap.g-0
+                            .trg
+                                img(class="img-fluid w-100" src="/assets/images/trg.svg")
+                    .row.d-flex.justify-content-center.g-0(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.text-center.mt-3.mb-3.position-relative.g-0
+                            .dropdown
+                                button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle.w-100.btn-lg(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                    | Dimensiones de Evaluación
+                                ul.dropdown-menu(aria-labelledby='dropdownMenuButton')
+                                    li
+                                        a.dropdown-item(href='#') Opcion 1
+                                    li
+                                        a.dropdown-item(href='#') Opcion 2
+                                    li
+                                        a.dropdown-item(href='#') Opcion 3
+                    .row.d-flex.justify-content-center.g-0(data-aos="fade-up" data-aos-duration="700")
+                        .col-md-6.text-center.mt-2.position-relative
+                            a(href="/page-templates/pages/about.html" class="btn btn-primary shadow btn-lg lift d-block" )
+                                |Indicadores de Evaluación
+                                i(class=" d-md-inline ms-1" data-feather="arrow-right")
+
+

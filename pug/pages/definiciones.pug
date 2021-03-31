@@ -1,0 +1,97 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends ../page-templates/tpl_page.pug
+
+block title
+    title OCAD - Definiciones
+block breadcrum
+    section.block--breadcrum
+        .container
+            nav(style='--bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\'%3E%3Cpath d=\'M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z\' fill=\'currentColor\'/%3E%3C/svg%3E");' aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='/') Inicio 
+                    li.breadcrumb-item.active Portal de Datos
+                    li.breadcrumb-item.active(aria-current='page') Definiciones
+block title-page
+    section#round-title.bg-brand-color-light.pt-4.pb-4.position-relative
+        .container
+            .row
+                .col-12.col-md-10.col-lg-9.col-xl-8
+                    .pre--h1.mt-4
+                        |Portal de Datos
+                    h2 Definiciones
+block contenido
+    section#def.bg-brand-color.pt-md-15
+        .container
+            .row.d-flex
+                .col-12.col-md-3.col-lg-3.col-def-body.pe-4.order-md-1.order-2
+                    p
+                        |Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    p
+                        a(href="" class="btn btn-primary-line--white " ) Conocer método
+                .col-12.col-lg-8.body-def.order-md-2.order-1
+                    #accordionFlushExample.accordion.open.accordion-flush
+                        .accordion-item
+                            h2#flush-headingOne.accordion-header
+                                button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='     flush-collapseOne')
+                                    | Atención domiciliaria en salud
+                            #flush-collapseOne.accordion-collapse.collapse.show(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    |Atención extra-hospitalaria que busca brindar una solución a los problemas de salud en el domicilio y que cuenta con el apoyo de profesionales, técnicos y auxiliares del área de la salud con participación de la familia.
+
+                        .accordion-item
+                            h2#flush-headingTwo.accordion-header(data-aos="fade-up" data-aos-duration="700")
+                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls=    'flush-collapseTwo')
+                                    | Consulta externa general y especializada domiciliaria
+                            #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    | Servicios de orientación, diagnóstico, tratamiento o paliación de acuerdo con el criterio médico y en el marco de su autonomía, la atención podrá tener carácter prioritario.
+                        
+                        .accordion-item
+                            h2#flush-headingThree.accordion-header(data-aos="fade-up" data-aos-duration="700" delay="10")
+                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls=    'flush-collapseThree')
+                                    |Rehabilitación domiciliaria
+                            #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    | Servicios orientados al tratamiento y rehabilitación a fin de prevenir discapacidades y lograr la curación o paliación de las enfermedades o síntomas. Incluye fisioterapia o terapia física, fonoaudiología o terapia de lenguaje, terapia ocupacional y terapia respiratoria.
+                        .accordion-item
+                            h2#flush-headingThree.accordion-header(data-aos="fade-up" data-aos-duration="700" delay="20")
+                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapsefour' aria-expanded='false' aria-controls=    'flush-collapsefour')
+                                    | Hospitalización domiciliaria al paciente agudo
+                            #flush-collapsefour.accordion-collapse.collapse(aria-labelledby='flush-headingfour' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    | Conjunto de intervenciones en salud de rango hospitalario, ofrecidas cuando se necesita vigilancia activa y asistencia compleja durante un lapso de tiempo determinado, sin necesidad de utilizar la infraestructura hospitalaria. 
+                        .accordion-item
+                            h2#flush-headingThree.accordion-header(data-aos="fade-up" data-aos-duration="700"  delay="30")
+                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapsefive' aria-expanded='false' aria-controls=    'flush-collapsefive')
+                                    | Hospitalización domiciliaria al paciente crónico
+                            #flush-collapsefive.accordion-collapse.collapse(aria-labelledby='flush-headingfive' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    | Atención en salud al paciente con patología crónica con y sin ventilación, que requiere valoraciones y cuidados por personal de salud mediante un plan individualizado de atención buscando mantener el entorno, las funciones y prevenir deterioro, con la máxima comodidad y alivio de síntomas posibles.
+                        .accordion-item
+                            h2#flush-headingThree.accordion-header(data-aos="fade-up" data-aos-duration="700"  delay="40")
+                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapsesix' aria-expanded='false' aria-controls=    'flush-collapsesix')
+                                    | Cuidados paliativos domiciliarios
+                            #flush-collapsesix.accordion-collapse.collapse(aria-labelledby='flush-headingsix' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    | Cuidados apropiados para el paciente con una enfermedad terminal, crónica, degenerativa e irreversible donde el control del dolor y otros síntomas, requieren, además del apoyo médico, social y espiritual, de apoyo psicológico y familiar, durante la enfermedad y el duelo.
+                        .accordion-item
+                            h2#flush-headingThree.accordion-header(data-aos="fade-up" data-aos-duration="700"  delay="50")
+                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseseven' aria-expanded='false' aria-controls=    'flush-collapseseven')
+                                    | Atención domiciliaria en promoción de la salud
+                            #flush-collapseseven.accordion-collapse.collapse(aria-labelledby='flush-headingseven' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    | Acciones de educación en salud, destinados a mejorar el nivel de conocimiento y desarrollar habilidades individuales para mejorar la salud.
+                        .accordion-item
+                            h2#flush-headingThree.accordion-header(data-aos="fade-up" data-aos-duration="700"  delay="60")
+                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseight' aria-expanded='false' aria-controls=    'flush-collapseight')
+                                    | Atención domiciliaria en prevención de la enfermedad
+                            #flush-collapseight.accordion-collapse.collapse(aria-labelledby='flush-headingeight' data-bs-parent='#accordionFlushExample')
+                                .accordion-body.mb-4
+                                    | Conjunto de intervenciones orientados a prevenir la aparición de enfermedades a través de la reducción de factores de riesgo, y/o disminuir complicaciones en caso de enfermedades ya establecidas. 
+
+
