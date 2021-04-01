@@ -272,7 +272,7 @@ p{
 }
 .overlay{
     &::after{
-        content: url(/assets/images/corner-left.png);
+        content: url(/wp-content/themes/ocad-master/assets/images/corner-left.png);
         bottom: 0;
         left: 0;
         z-index: 5;
